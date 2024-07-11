@@ -25,7 +25,7 @@ function App() {
     const orderDetails = cartItems.map(item => `${item.name} x ${item.quantity}`).join('\n');
     const message = `Order\nNama: ${name}\nAlamat: ${address}\nPesanan:\n${orderDetails}\nTotal Harga: Rp ${totalPrice.toLocaleString()}`;
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/+622149821348?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/622149821348?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
     setCartItems([]);
   };
